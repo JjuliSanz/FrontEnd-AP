@@ -1,0 +1,31 @@
+.form-container {
+  height: 77vh;
+}
+.login-form {
+  margin-top: 10%;
+}
+
+/* ---- NAVBAR ---- */
+.navbar-brand-img {
+  width: 15%;
+}
+
+.list-group-item {
+  --bs-list-group-bg: transparent;
+  cursor: pointer;
+  border: none;
+}
+.nav-icon {
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+.nav-icon:hover {
+  opacity: 0.8;
+  transform: scale(0.8);
+}
+.nav-border {
+  border-color: var(--color) !important;
+}
+.navbar {
+  height: 4rem;
+}

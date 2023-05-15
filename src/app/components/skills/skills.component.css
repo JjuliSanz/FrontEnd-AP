@@ -1,0 +1,28 @@
+.row {
+  --bs-gutter-x: -0.8rem;
+}
+
+/* HARD SKILLS */
+.hard-skills-bar-container {
+  margin: 1rem;
+}
+.hard-skills-bar {
+  --bs-progress-bar-bg: var(--color);
+}
+.hard-skills-text {
+  border-color: var(--color) !important;
+  padding-top: 0.5rem;
+}
+.skills-title {
+  margin-bottom: 1rem;
+}
+
+/* SOFT SKILLS */
+.soft-row {
+  padding: 1rem;
+  border-color: var(--color) !important;
+}
+.soft-icons {
+  font-size: 2rem;
+  padding-left: 9rem;
+}

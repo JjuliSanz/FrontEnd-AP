@@ -1,0 +1,36 @@
+<div class="container text-center mt-5 position-relative">
+  <div class="row">
+    <!-- Profile Image -->
+    <div class="col-2">
+      <img [src]="person.image" alt="profile picture" class="img-fluid w-100 profile-picture">
+    </div>
+    <div class="col-10 mt-5">
+      <!-- Title -->
+      <h1 class="text-center presentation-title">{{person.name}} {{person.lastName}}</h1>
+      <div class="d-flex justify-content-center">
+        <!-- Age -->
+        <h6 class="pe-1">{{person.age}} years old</h6>
+        <!-- / -->
+        <p class="lh-1 fs-5">/</p>
+        <!-- State -->
+        <!-- <h6 class="ps-1">Argentina, Buenos Aires 🇦🇷</h6> -->
+        <h6 class="ps-1">{{person.nationality}}</h6>
+      </div>
+      <!-- Position -->
+      <h2 class="text-center presentation-title">{{person.title}}</h2>
+      <!-- Description -->
+      <h5 class="text-center">{{person.description}}</h5>
+    </div>
+  </div>
+  <!-- Edit -->
+  <button type="button" class="btn position-absolute top-0 end-0" [routerLink]="['/personEdit', person.id]" *ngIf="isLogged">
+    <i class="fa-solid fa-pen-to-square"></i>
+  </button>
+  <div *ngIf="isLoading" class="text-center mt-3">
+    <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+  </div>
+</div>
+
+
+<!-- data-bs-toggle="modal" data-bs-target="#presentationModal" -->
+<!-- <app-presentation-modal></app-presentation-modal> -->

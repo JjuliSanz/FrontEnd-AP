@@ -1,0 +1,56 @@
+<div class="container text-center form-container mb-4">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-8 login-form">
+      <form [formGroup]="form" (ngSubmit)="onUpdate()" >      
+        <!---- ROW 1 ---->
+        <div class="mb-4 mt-3 d-flex justify-content-between">
+          <h2 class="edit-title">EDIT EDUCATION</h2>
+          <button type="button" class="btn-close" (click)="close()"></button>
+        </div>
+        <!-- <div *ngIf="alert" class="alert alert-success aler-dismissible fade-show">
+          <strong>Success !</strong> Your data has been updated successfully.
+          <button (click)="close()" type="button" class="close" >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <!---- ROW 2 ---->
+        <div class="mb-4 row ">
+          <!-- Icon -->
+          <label for="educationIcon" class="form-label">Edit Education Icon</label>
+          <input type="text" class="form-control shadow-none" formControlName="icon" [ngModel]="">
+        </div>
+        <!---- ROW 3 ---->
+        <div class="row mb-4">
+          <!-- Title -->
+          <label for="educationTitle" class="form-label">Edit Education Title</label>
+          <input type="text" class="form-control shadow-none" id="educationTitle" formControlName="title" [ngModel]="">
+        </div>
+        <!---- ROW 4 ---->
+        <div class="row mb-4">
+          <!-- Institution -->
+          <label for="educationInstitutionInput" class="form-label">Edit Education Institution</label>
+          <input type="text" class="form-control shadow-none" id="educationInstitutionInput" formControlName="institution" [ngModel]="">
+        </div>
+        <!---- ROW 5 ---->
+        <div class="mb-4 row">         
+          <!-- Start -->
+          <label for="educationStartDateInput" class="form-label">Edit Education Start Date</label>
+          <input type="date" class="form-control shadow-none" id="educationStartDateInput" formControlName="start" [ngModel]="">
+        </div>
+        <div class="mb-4 row">
+          <!-- End -->
+          <label for="educationEndDateInput" class="form-label">Edit Education End Date</label>
+          <input type="date" class="form-control shadow-none" id="educationEndDateInput" formControlName="end" [ngModel]="">
+        </div>
+        <!---- ROW 6 ---->
+        <div class="mt-3 mb-4">         
+            <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>      
+      </form>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+{
+  "name": "Julian",
+  "lastname": "Sanz",
+  "position": "Full-Stack Developer",
+  "profileImg": "./img/ProfilePicture",
+  "network": [
+    {
+      "id": 1,
+      "icon": "fa-linkedin"
+    },
+    {
+      "id": 2,
+      "icon": "fa-github"
+    },
+    {
+      "id": 3,
+      "icon": "fa-telegram"
+    }
+  ],
+  "aboutMe": "",
+  "profileImage": "",
+  "education": [
+    {
+      "id": 1,
+      "icon": "fa-react",
+      "title": "ReactJs Course",
+      "institution": "CoderHouse",
+      "date": "16 August - 29 September"
+    },
+    {
+      "id": 2,
+      "icon": "fa-square-js",
+      "title": "Javascript Course",
+      "institution": "CoderHouse",
+      "date": "14 June - 9 August"
+    },
+    {
+      "id": 3,
+      "icon": "fa-code",
+      "title": "#SeProgramar",
+      "institution": "Argentina Programa",
+      "date": "2022 - 2022"
+    },
+    {
+      "id": 4,
+      "icon": "fa-html5",
+      "title": "Web Development Course",
+      "institution": "CoderHouse",
+      "date": "15 March - 17 May"
+    },
+    {
+      "id": 5,
+      "icon": "fa-graduation-cap",
+      "title": "High School grade",
+      "institution": "E.E.S. N°17",
+      "date": "2015 - 2021"
+    }
+  ],
+  "hardSkill": [
+    {
+      "id": 1,
+      "skill": "Javascript",
+      "percentage": "75"
+    },
+    {
+      "id": 2,
+      "skill": "ReactJs",
+      "percentage": "65"
+    },
+    {
+      "id": 3,
+      "skill": "HTML & CSS",
+      "percentage": "80"
+    },
+    {
+      "id": 4,
+      "skill": "NodeJs",
+      "percentage": "70"
+    },
+    {
+      "id": 5,
+      "skill": "MongoDB",
+      "percentage": "50"
+    }
+  ],
+  "softSkill": [
+    {
+      "id": 1,
+      "icon": "fa-mountain-sun",
+      "skill": "Stoic"
+    },
+    {
+      "id": 2,
+      "icon": "fa-book",
+      "skill": "Self-Taught"
+    },
+    {
+      "id": 3,
+      "icon": "fa-code",
+      "skill": "Problem Solving"
+    },
+    {
+      "id": 4,
+      "icon": "fa-people-group",
+      "skill": "Colaboration"
+    }
+  ],
+  "languaje": [
+    {
+      "id": 1,
+      "languaje": "Spanish",
+      "level": "Native",
+      "percentage": "100"
+    },
+    {
+      "id": 2,
+      "languaje": "English",
+      "level": "Advanced",
+      "percentage": "75"
+    }
+  ] 
+}

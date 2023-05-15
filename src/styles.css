@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color: rgb(189, 64, 189);
+ 
+}
+
+.skills-bar {
+  --bs-progress-bar-bg: var(--color);
+}
+
+a {
+  color: var(--color) !important;
+}
+
+input {
+  border-color: var(--color) !important;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+textarea {
+  border-color: var(--color) !important;
+}
+
+.btn-secondary {
+  background-color: rgb(156, 108, 158) !important;
+}
+
+.modal-content {
+  /* border: 1px solid var(--color) !important; */
+  border: var(--bs-modal-border-width) solid var(--color) !important;
+}
+.modal-header {
+  border-bottom: var(--bs-modal-header-border-width) solid var(--color) !important;
+}
+
+.modal-footer{
+  border-top: var(--bs-modal-footer-border-width) solid var(--color) !important;
+}
+
+
+.ng-valid:not(form).ng-touched {
+  border: 1px solid green;
+}
+
+.ng-invalid:not(form).ng-touched {
+  border: 1px solid red;
+}
+

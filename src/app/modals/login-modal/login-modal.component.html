@@ -1,0 +1,90 @@
+<div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="titleModalLabel">Log In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="modal-body">
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="user" class="form-label">User</label>
+            <input type="text" class="form-control shadow-none" id="userName" name="userName" [(ngModel)]="userName" required>
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control shadow-none" id="password" name="password" [(ngModel)]="password" required>
+            <!-- <small>
+              If you don't have an account, register
+              <a routerLink="/register">
+                here.
+              </a>
+            </small> -->
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary">Log in</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- <form [formGroup]="form">
+  <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="titleModalLabel">Log In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" class="form-control shadow-none" id="emailInput" placeholder="your email address"
+              formControlName="email">
+            
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+              <div *ngIf="email.errors?.['required']">
+                email is required.
+              </div>
+              <div *ngIf="email.errors?.['email']">
+                email should be a valid format.
+              </div>
+            </div>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input type="password" class="form-control shadow-none" id="passwordInput" placeholder="name@example.com"
+              formControlName="password">
+            
+            <div *ngIf="password.invalid && (password.dirty || email.touched)" class="text-danger">
+              <div *ngIf="password.errors?.['required']">
+                password is required.
+              </div>
+              <div *ngIf="password.errors?.['minLength']">
+                password should be greater than 4 characters.
+              </div>
+              <div class="invalid-feedback">
+                Please provide a password.
+              </div>
+            </div>
+            <small>
+              If you don't have an account, register
+              <a routerLink="/register">
+                here.
+              </a>
+            </small>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary" (click)="login">Log in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form> -->

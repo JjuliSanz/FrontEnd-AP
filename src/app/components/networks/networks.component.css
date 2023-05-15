@@ -1,0 +1,13 @@
+.list-group-item {
+  --bs-list-group-bg: transparent;
+  cursor: pointer;
+  border: none;
+}
+.network-icon {
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+.network-icon:hover {
+  opacity: 0.8;
+  transform: scale(0.8);
+}

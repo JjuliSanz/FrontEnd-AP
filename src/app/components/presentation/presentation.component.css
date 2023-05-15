@@ -1,0 +1,9 @@
+/* PRESENTATION */
+.profile-picture {
+  border-radius: 30%;
+  border: 2px solid var(--color);
+}
+.presentation-title {
+  text-decoration: underline;
+  text-decoration-color: var(--color);
+}

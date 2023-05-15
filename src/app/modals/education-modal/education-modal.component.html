@@ -1,0 +1,57 @@
+<div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="educationModalLabel">New Education</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="clean()"></button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSend($event)" name="educationForm">
+        <!---- Modal Body ---->
+        <div class="modal-body">
+          <!-- Education Icon -->
+          <div class="mb-3">
+            <label for="educationIcon" class="form-label">New Education Icon</label>
+            <input type="text" class="form-control shadow-none" id="educationIcon" [(ngModel)]="icon"
+              formControlName="icon">
+          </div>
+          <!-- Education Title -->
+          <div class="mb-3">
+            <label for="educationTitle" class="form-label">New Education Title</label>
+            <input type="text" class="form-control shadow-none" id="educationTitle" formControlName="title"
+              [(ngModel)]="title">
+            <!-- <input type="text" class="form-control shadow-none" id="educationTitle" formControlName="title" [(ngModel)]="title" [ngClass]="{'is-invalid': Education.errors && Education.touched, 'is-valid': !Education.errors && Education.touched}">
+            <div *ngIf="Education.errors && Education.touched">
+              <p *ngIf="Education.hasError('required')" class="text-danger">
+                The Education Title is required
+              </p>
+            </div> -->
+          </div>
+          <!-- Education Institution -->
+          <div class="mb-3">
+            <label for="educationInstitutionInput" class="form-label">New Education Institution</label>
+            <input type="text" class="form-control shadow-none" id="educationInstitutionInput"
+              formControlName="institution" [(ngModel)]="institution">
+          </div>
+          <div class="row">
+            <!-- Start Date -->
+            <div class="mb-3 col-6">
+              <label for="educationStartDateInput" class="form-label">New Education Start Date</label>
+              <input type="date" class="form-control shadow-none" id="educationStartDateInput" formControlName="start"
+                [(ngModel)]="start">
+            </div>
+            <div class="mb-3 col-6">
+              <label for="educationEndDateInput" class="form-label">New Education End Date</label>
+              <input type="date" class="form-control shadow-none" id="educationEndDateInput" formControlName="end"
+                [(ngModel)]="end">
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="clean()">Clean form</button>
+          <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

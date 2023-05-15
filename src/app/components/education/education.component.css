@@ -1,0 +1,11 @@
+/* EDUCATION */
+.education-title {
+  margin-bottom: 1rem;
+ }
+ .education-row {
+   padding-top: 1rem;
+   border-color: var(--color) !important;
+ }
+ .education-icon {
+   font-size: 2rem;
+ }

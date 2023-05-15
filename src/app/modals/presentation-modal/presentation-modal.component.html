@@ -1,0 +1,57 @@
+<div class="modal fade" id="presentationModal" tabindex="-1" aria-labelledby="presentationModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="presentationModalLabel">Edit Your Info</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="clean()"></button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSend($event)" name="presentationForm" >
+        <!---- Modal Body ---->
+        <div class="modal-body">
+          <!-- Profile Image -->
+          <div class="mb-3">
+            <label for="profileImage" class="form-label">Profile Image</label>
+            <input type="file" class="form-control shadow-none" id="profileImage" [(ngModel)]="image" formControlName="image">
+          </div>
+          <!-- Name -->
+          <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control shadow-none" id="nameInput" [(ngModel)]="name" formControlName="name">
+          </div>
+          <!-- LastName -->
+          <div class="mb-3">
+            <label for="lastNameInput" class="form-label">Last Name</label>
+            <input type="text" class="form-control shadow-none" id="lastNameInput" [(ngModel)]="lastName" placeholder="{{lastName}}" formControlName="lastName">
+          </div>
+          <!-- Age -->
+          <div class="mb-3">
+            <label for="ageInput" class="form-label">Age</label>
+            <input type="number" class="form-control shadow-none" id="ageInput" [(ngModel)]="age" formControlName="age">
+          </div>
+          <!-- Nationality -->
+          <div class="mb-3">
+            <label for="stateInput" class="form-label">Nationality</label>
+            <input type="text" class="form-control shadow-none" id="stateInput" [(ngModel)]="nationality"
+              placeholder="Argentina, Buenos Aires 🇦🇷" formControlName="nationality">
+          </div>
+          <!-- Title -->
+          <div class="mb-3">
+            <label for="titleInput" class="form-label">Title</label>
+            <input type="text" class="form-control shadow-none" id="titleInput" [(ngModel)]="title" formControlName="title">
+          </div>
+          <!-- Description -->
+          <div class="mb-3">
+            <label for="descriptionInput" class="form-label">Description</label>
+            <textarea class="form-control shadow-none" aria-label="With textarea" [(ngModel)]="description" formControlName="description"></textarea>
+            <!-- <input type="text" class="form-control" id="descriptionInput"> -->
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="clean()">Clean form</button>
+          <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

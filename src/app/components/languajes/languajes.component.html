@@ -1,0 +1,40 @@
+<!-- LANGUAJES -->
+<div class="container mt-5">
+  <div class="position-relative">
+    <h2 class="skills-title text-center">LANGUAGES</h2>
+    <button type="button" class="btn position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#languajeModal" *ngIf="isLogged">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+  <div class="row languaje-row text-center">
+    <!-- ROW-1 -->
+    <div class="col-6" *ngFor="let languaje of languajes">
+      <div class="border-top border-bottom border-2 rounded-4 border-soft ">
+        <div class="row">
+          <!-- ROW 1 -->
+          <div class="col-2"></div>
+          <!-- ROW 2 -->
+          <div class="col-8">
+            <h2 class="languaje-h2">{{languaje.title}}</h2>
+            <h4 class="languaje-h4">{{languaje.level}}</h4>
+          </div>
+          <!-- ROW 3 -->
+          <div class="col-2">
+            <!-- Add -->
+            <button type="button" class="btn" [routerLink]="['/languajeEdit', languaje.id]" *ngIf="isLogged">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <!-- Delete -->
+            <button type="submit" class="btn" (click)="delete(languaje.id || 0)" *ngIf="isLogged">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>     
+      </div>
+      <div *ngIf="isLoading" class="text-center mt-3">
+        <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+      </div>
+    </div>
+  </div>
+</div>
+<app-languaje-modal></app-languaje-modal>

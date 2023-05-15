@@ -1,0 +1,31 @@
+<div class="modal fade" id="softSkillModal" tabindex="-1" aria-labelledby="softSkillModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="softSkillModalLabel">New Soft Skill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSend($event)">
+        <!---- Modal Body ---->
+        <div class="modal-body">
+          <!-- SoftSkill Icon -->
+          <div class="mb-3">
+            <label for="softSkillIcon" class="form-label">New Soft Skill Icon</label>
+            <input type="text" class="form-control shadow-none" id="softSkillIconInput" [(ngModel)]="icon"
+              formControlName="icon">
+          </div>
+          <!-- SoftSkill Title -->
+          <div class="mb-3">
+            <label for="softSkillTitle" class="form-label">New Soft Skill Title</label>
+            <input type="text" class="form-control shadow-none" id="softSkillTitle" [(ngModel)]="title"
+              formControlName="title">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="clean()">Clean form</button>
+          <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

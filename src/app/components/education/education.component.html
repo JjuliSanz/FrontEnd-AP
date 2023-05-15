@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="position-relative">
+    <h2 class="education-title">EDUCATION</h2>
+    <!-- Add -->
+    <button type="button" class="btn position-absolute top-0 end-0" data-bs-toggle="modal" data-bs-target="#educationModal" *ngIf="isLogged">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+  </div>
+  <!-- ROW 1 -->
+  <div class="row education-row border-top border-2  rounded-4" *ngFor="let education of educations">
+    <div class="col-1 d-flex justify-content-center align-items-center">
+      <i class="{{education.icon}} education-icon"></i>
+    </div>
+    <div class="col-10">
+      <h2 class="">{{education.title}}</h2>
+      <h4 class="">{{education.institution}}</h4>
+      <h6 class="">{{education.start | date:"MM-dd-yyyy" }} {{education.end | date:"MM-dd-yyyy"}}</h6>
+    </div>
+    <div class="col-1">
+      <!-- Edit -->
+      <button type="button" class="btn" [routerLink]="['/educationEdit', education.id]" *ngIf="isLogged">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+      <!-- Delete -->
+      <button type="submit" class="btn" (click)="delete(education.id || 0)" *ngIf="isLogged">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+    </div>
+    <div *ngIf="isLoading" class="text-center mt-3">
+      <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+    </div>
+  </div>
+</div>
+
+<app-education-modal></app-education-modal>
+<!-- <app-education-edit-modal></app-education-edit-modal> -->
+

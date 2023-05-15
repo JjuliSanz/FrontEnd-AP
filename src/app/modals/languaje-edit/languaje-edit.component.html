@@ -1,0 +1,35 @@
+<div class="container text-center form-container mb-4">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-8 login-form">
+      <form [formGroup]="form" (ngSubmit)="onUpdate()" >      
+        <!---- ROW 1 ---->
+        <div class="mb-4 mt-3 d-flex justify-content-between">
+          <h2 class="edit-title">EDIT LANGUAJE</h2>
+          <button type="button" class="btn-close" (click)="close()"></button>
+        </div>
+        <!---- ROW 2 ---->
+        <div class="row mb-4">
+          <!-- Title -->
+          <label for="languajeTitle" class="form-label">Edit Languaje Title</label>
+          <input type="text" class="form-control shadow-none" id="languajeTitle" formControlName="title" [ngModel]="">
+        </div>        
+        <!---- ROW 3 ---->
+        <div class="mb-4 row ">
+          <!-- Level -->
+          <label for="languajeLevel" class="form-label">Edit Languaje Level</label>
+          <input type="text" class="form-control shadow-none" formControlName="level" [ngModel]="">
+        </div>
+        <!---- ROW 4 ---->
+        <div class="mt-3 mb-4">         
+          <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>      
+      </form>
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+
+

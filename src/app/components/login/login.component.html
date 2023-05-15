@@ -1,0 +1,8 @@
+<li class="list-group-item fa-2x ">          
+  <!-- <a routerLink="/login" target="_blank">
+    <i class="fa-solid fa-user-lock network-icon"></i>
+  </a> -->
+  <i class="fa-solid fa-user-lock network-icon" type="button" data-bs-toggle="modal" data-bs-target="#logInModal" *ngIf="!isLogged"></i>
+  <i class="fa-solid fa-user network-icon" type="button" (click)="onLogOut()" *ngIf="isLogged"></i>
+</li>
+<app-login-modal></app-login-modal>

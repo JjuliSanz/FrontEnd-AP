@@ -1,0 +1,16 @@
+/* LANGUAJES */
+.languaje-title {
+  margin-bottom: 1rem;
+}
+.languaje-row {
+  padding: 1rem;
+}
+.border-soft {
+  border-color: var(--color) !important;
+}
+.languaje-h2 {
+  padding-top: 0.5rem;
+}
+.languaje-h4 {
+  padding-bottom: 0.5rem;
+}

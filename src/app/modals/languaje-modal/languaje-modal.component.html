@@ -1,0 +1,31 @@
+<div class="modal fade" id="languajeModal" tabindex="-1" aria-labelledby="languajeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="languajeModalLabel">New Languaje</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSend($event)">
+        <!---- Modal Body ---->
+        <div class="modal-body">
+          <!-- Languaje title -->
+          <div class="mb-3">
+            <label for="languajeTitle" class="form-label">New Languaje</label>
+            <input type="text" class="form-control shadow-none" id="languajeTitle" [(ngModel)]="title"
+              formControlName="title">
+          </div>
+          <!-- Languaje level -->
+          <div class="mb-3">
+            <label for="languajeLevel" class="form-label">New Languaje Level</label>
+            <input type="text" class="form-control shadow-none" id="languajeLevel" [(ngModel)]="level"
+              formControlName="level">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="clean()">Clean form</button>
+          <button type="submit" class="btn btn-secondary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

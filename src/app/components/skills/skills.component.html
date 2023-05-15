@@ -1,0 +1,84 @@
+<div class="row mt-5">
+  <div class="col-6">
+    <!-- HARD SKILLS -->
+    <div class="container mt-5">
+      <div class="position-relative">
+        <h2 class="skills-title">HARD SKILLS</h2>
+        <!-- Add -->
+        <button *ngIf="isLogged" type="button" class="btn position-absolute top-0 end-0" data-bs-toggle="modal"
+          data-bs-target="#hardSkillModal">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <!-- Row 1 -->
+      <div class="" *ngFor="let hardSkill of hardSkills">
+        <div class="row border-top border-2 rounded-4 hard-skills-text">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <!-- Title -->
+            <h3 class="text-center">
+              {{hardSkill.title}}
+            </h3>
+          </div>          
+          <div class="col-2">
+            <!-- Edit -->
+            <button type="button" class="btn" [routerLink]="['/hardSkillEdit', hardSkill.id]" *ngIf="isLogged">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <!-- Delete -->
+            <button type="submit" class="btn" (click)="deleteHardSkill(hardSkill.id || 0)" *ngIf="isLogged">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Level -->
+        <div class="progress hard-skills-bar-container" role="progressbar" aria-label="Default striped example"
+          aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+          <!-- <div class="progress-bar progress-bar-striped skills-bar" [style.width]="hardSkill.percentage + '%'"></div> -->
+          <div class="progress-bar progress-bar-striped skills-bar" [style.width.%]="hardSkill.percentage"></div>
+        </div>
+        <div *ngIf="isLoading" class="text-center mt-3">
+          <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <!-- SOFT SKILLS -->
+    <div class="container mt-5">
+      <div class="position-relative">
+        <h2 class="skills-title">SOFT SKILLS</h2>
+        <!-- Add -->
+        <button type="button" class="btn position-absolute top-0 end-0" data-bs-toggle="modal"
+          data-bs-target="#softSkillModal" *ngIf="isLogged">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <!-- ROW 1 -->
+      <div class="row border-top border-2 rounded-4 soft-row" *ngFor="let softSkill of softSkills">
+        <div class="col-4 d-flex align-items-center">
+          <i class="{{softSkill.icon}} soft-icons"></i>
+          <!-- <i class="fa-solid soft-icons" [ngClass]="softSkill.icon"></i> -->
+        </div>
+        <div class="col-6">
+          <h2 class="">{{softSkill.title}}</h2>
+        </div>
+        <div class="col-1 d-flex">
+          <!-- Edit -->
+          <button type="button" class="btn" [routerLink]="['/softSkillEdit', softSkill.id]" *ngIf="isLogged">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <!-- Delete -->
+          <button type="submit" class="btn" (click)="deleteSoftSkill(softSkill.id || 0)" *ngIf="isLogged">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+        <div *ngIf="isLoading" class="text-center mt-3">
+          <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-hard-skill-modal></app-hard-skill-modal>
+<app-soft-skill-modal></app-soft-skill-modal>
