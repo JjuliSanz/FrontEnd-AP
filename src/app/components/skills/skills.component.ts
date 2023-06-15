@@ -29,7 +29,7 @@ export class SkillsComponent implements OnInit {
   isLogged = false;
   hardSkills: HardSkill[] = [];
   softSkills: SoftSkill[] = [];
-  isLoading: boolean = true;
+  // isLoading: boolean = true;
   constructor(private hardSkillService:HardSkillService, private softSkillService:SoftSkillService, private tokenService:TokenService) {}
 
   ngOnInit(): void {
@@ -43,22 +43,22 @@ export class SkillsComponent implements OnInit {
   }
 
   loadHardSkill(): void {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.hardSkillService.list().subscribe(data => {
       this.hardSkills = data;
-      this.isLoading = false;
+      // this.isLoading = false;
     },
     (error) => {
       console.log(error);
-      this.isLoading = false;
+      // this.isLoading = false;
     });
   }
 
   loadSoftSkill(): void {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.softSkillService.list().subscribe(data => {
       this.softSkills = data;
-      this.isLoading = false;
+      // this.isLoading = false;
     },
     (error) => {
       console.log(error);      

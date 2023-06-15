@@ -11,7 +11,8 @@ import { LoginUser } from '../entities/login-user';
 })
 
 export class AuthService {
-  authUrl = 'Http://localhost:8080/auth/';
+  // authUrl = 'Http://localhost:8080/auth/';
+  authUrl = 'https://backend-ap-yky6.onrender.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

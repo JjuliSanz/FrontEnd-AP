@@ -1,6 +1,14 @@
 <app-navbar></app-navbar>
-<app-presentation></app-presentation>
-<app-education></app-education>
-<app-skills></app-skills>
-<app-languajes></app-languajes>
-<app-footer></app-footer>
+
+<ng-container *ngIf="loading">
+  <app-loading></app-loading>
+</ng-container>
+
+<ng-container *ngIf="!loading">
+  <app-presentation></app-presentation>
+  <app-education></app-education>
+  <app-skills></app-skills>
+  <app-languajes></app-languajes>
+  <app-footer></app-footer>
+</ng-container>
+

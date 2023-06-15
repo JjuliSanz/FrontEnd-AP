@@ -19,6 +19,7 @@ export class LoginModalComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errMsj!: string;
+  isLoading: boolean = false
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -31,6 +32,7 @@ export class LoginModalComponent implements OnInit {
   }
 
   onLogin(): void {
+    this.isLoading = true;
     this.loginUser = new LoginUser(this.userName, this.password);
     this.authService.login(this.loginUser).subscribe(data => {
       this.isLogged = true;
@@ -39,6 +41,7 @@ export class LoginModalComponent implements OnInit {
       this.tokenService.setUserName(data.userName);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
+      this.isLoading = false;
       alert("successfully logged in");
       window.location.reload();
       // this.router.navigate([''])

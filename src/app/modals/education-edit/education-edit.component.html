@@ -9,44 +9,45 @@
           <h2 class="edit-title">EDIT EDUCATION</h2>
           <button type="button" class="btn-close" (click)="close()"></button>
         </div>
-        <!-- <div *ngIf="alert" class="alert alert-success aler-dismissible fade-show">
-          <strong>Success !</strong> Your data has been updated successfully.
-          <button (click)="close()" type="button" class="close" >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> -->
         <!---- ROW 2 ---->
         <div class="mb-4 row ">
           <!-- Icon -->
           <label for="educationIcon" class="form-label">Edit Education Icon</label>
-          <input type="text" class="form-control shadow-none" formControlName="icon" [ngModel]="">
+          <input type="text" class="form-control shadow-none" formControlName="icon">
         </div>
         <!---- ROW 3 ---->
         <div class="row mb-4">
           <!-- Title -->
           <label for="educationTitle" class="form-label">Edit Education Title</label>
-          <input type="text" class="form-control shadow-none" id="educationTitle" formControlName="title" [ngModel]="">
+          <input type="text" class="form-control shadow-none" id="educationTitle" formControlName="title" [class.is-invalid]="Title?.invalid && (Title?.dirty || Title?.touched)">
+          <div *ngIf="Title?.invalid && (Title?.dirty || Title?.touched)" class="alert alert-danger">
+            Title is required.
+          </div>          
+          <!-- <div *ngIf="form.controls['title'].invalid && (form.controls['title'].dirty || form.controls['title'].touched)" class="alert alert-danger">
+            Title is required.
+          </div> -->
         </div>
+        
         <!---- ROW 4 ---->
         <div class="row mb-4">
           <!-- Institution -->
           <label for="educationInstitutionInput" class="form-label">Edit Education Institution</label>
-          <input type="text" class="form-control shadow-none" id="educationInstitutionInput" formControlName="institution" [ngModel]="">
+          <input type="text" class="form-control shadow-none" id="educationInstitutionInput" formControlName="institution">
         </div>
         <!---- ROW 5 ---->
         <div class="mb-4 row">         
           <!-- Start -->
           <label for="educationStartDateInput" class="form-label">Edit Education Start Date</label>
-          <input type="date" class="form-control shadow-none" id="educationStartDateInput" formControlName="start" [ngModel]="">
+          <input type="date" class="form-control shadow-none" id="educationStartDateInput" formControlName="start">
         </div>
         <div class="mb-4 row">
           <!-- End -->
           <label for="educationEndDateInput" class="form-label">Edit Education End Date</label>
-          <input type="date" class="form-control shadow-none" id="educationEndDateInput" formControlName="end" [ngModel]="">
+          <input type="date" class="form-control shadow-none" id="educationEndDateInput" formControlName="end">
         </div>
         <!---- ROW 6 ---->
         <div class="mt-3 mb-4">         
-            <button type="submit" class="btn btn-secondary">Save changes</button>
+          <button type="submit" class="btn btn-secondary">Save changes</button>
         </div>      
       </form>
     </div>

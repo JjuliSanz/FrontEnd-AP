@@ -13,7 +13,7 @@ import { TokenService } from 'src/app/servicies/token.service';
 // DATABASE
 export class EducationComponent implements OnInit {
   educations: Education[] = [];
-  isLoading: boolean = true;
+  // isLoading: boolean = true;
   isLogged = false;
 
   constructor(private educationService:EducationService, private tokenService: TokenService) {}
@@ -29,14 +29,16 @@ export class EducationComponent implements OnInit {
   }
 
   loadEducation(): void {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.educationService.list().subscribe(data => {
       this.educations=data;
-      this.isLoading = false;
+      
     },
     (error) => {
       console.log(error);
-      this.isLoading = false;
+      // this.isLoading = false;
+    }).add(() => {
+      // this.isLoading = false;
     });
   }
 

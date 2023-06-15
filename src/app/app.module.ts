@@ -29,6 +29,8 @@ import { SoftSkillEditComponent } from './modals/soft-skill-edit/soft-skill-edit
 import { LanguajeEditComponent } from './modals/languaje-edit/languaje-edit.component';
 import { PresentationEditComponent } from './modals/presentation-edit/presentation-edit.component';
 import { interceptorProvider } from './servicies/interceptor.service';
+import { LoadingComponent } from './components/loading/loading.component';
+import { DataService } from './servicies/data.service';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { interceptorProvider } from './servicies/interceptor.service';
     HardSkillEditComponent,
     SoftSkillEditComponent,
     LanguajeEditComponent,
-    PresentationEditComponent
+    PresentationEditComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { interceptorProvider } from './servicies/interceptor.service';
     ReactiveFormsModule
   ],
   providers: [
-    interceptorProvider
+    interceptorProvider,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

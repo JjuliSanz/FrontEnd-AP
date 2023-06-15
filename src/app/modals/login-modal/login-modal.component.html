@@ -24,7 +24,8 @@
             </small> -->
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-secondary">Log in</button>
+            <button type="submit" class="btn btn-secondary" *ngIf="!isLoading">Log in</button>
+            <button type="submit" class="btn btn-secondary" *ngIf="isLoading"><i class="fa-solid fa-spinner fa-spin"></i></button>
           </div>
         </div>
       </form>

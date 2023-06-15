@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/servicies/token.service';
 })
 export class PresentationComponent implements OnInit {
   person: Persona = new Persona();
-  isLoading: boolean = true;
+  // isLoading: boolean = true;
   isLogged = false;
 
   constructor(private personService:PersonaService, private tokenService:TokenService) {}
@@ -25,14 +25,14 @@ export class PresentationComponent implements OnInit {
   }
 
   loadPresentation(): void {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.personService.getById(2).subscribe(data => {
       this.person = data;
-      this.isLoading = false;
+      // this.isLoading = false;
     },
     (error) => {
       console.log(error);
-      this.isLoading = false;
+      // this.isLoading = false;
     });
   }
 }

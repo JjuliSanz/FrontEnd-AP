@@ -23,7 +23,7 @@ import { TokenService } from 'src/app/servicies/token.service';
 
 export class LanguajesComponent implements OnInit {
   languajes: Languaje[] = [];
-  isLoading: boolean = true;
+  // isLoading: boolean = true;
   isLogged = false;
 
   constructor(private languajeService:LanguajeService, private tokenService: TokenService) {}
@@ -38,14 +38,14 @@ export class LanguajesComponent implements OnInit {
   }
 
   loadLanguaje(): void {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.languajeService.list().subscribe(data => {
       this.languajes = data;
-      this.isLoading = false;
+      // this.isLoading = false;
     },
     (error) => {
       console.log(error);
-      this.isLoading = false;
+      // this.isLoading = false;
     });
   }
 

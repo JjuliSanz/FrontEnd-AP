@@ -13,7 +13,7 @@ export class EducationEditComponent implements OnInit {
 
   alert: boolean = false;
   form = new FormGroup({
-    title: new FormControl(''),
+    title: new FormControl('', [Validators.required]),
     institution: new FormControl(''),
     icon: new FormControl(''),
     start: new FormControl(''),
@@ -40,9 +40,9 @@ export class EducationEditComponent implements OnInit {
     })
   }
 
-  // get Title() {
-  //   return this.form.get("title");
-  // }
+  get Title() {
+    return this.form.get("title");
+  }
 
   onUpdate() {
     const id = this.activatedRoute.snapshot.params['id'];
